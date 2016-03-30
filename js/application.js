@@ -47,7 +47,7 @@ $(document).ready(function() {
 				if (type === "grey"){
 					orig = rgb2hex($(this).css("background-color")) 
 					console.log(parseInt(orig.substring(1), 16))
-					greyer = parseInt(orig.substring(1), 16)-1381653
+					greyer = parseInt(orig.substring(1), 16)-2763306
 					if (greyer < 200000){
 						greyer = 0
 					}
