@@ -68,7 +68,11 @@ $(document).ready(function() {
 	})
 
 	$('#clear').on('click', function(){
-		$('.box').css({"background-color":"#fff"})
+		if(type === "trail"){
+			$('.box').css({"background-color":"#000"})
+		}else{
+			$('.box').css({"background-color":"#fff"})
+		}
 	})
 	
 	createGrid(16,16, "normal")
