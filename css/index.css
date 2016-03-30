@@ -2,9 +2,9 @@
 	width: 632px;
 	height: 632px;
 	margin: 0 auto;
+	border: 1px solid black;
 
 }
-
 
 .column {
 	width: 100%
@@ -20,3 +20,14 @@
 	border: 1px solid black;
 
 }
+
+.hover{
+	background-color: black;
+}
+
+#btnDiv {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+}
+

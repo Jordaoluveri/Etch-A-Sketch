@@ -14,5 +14,14 @@ $(document).ready(function() {
 			console.log($column);
 		}
 	}
-	
+	$('.box').hover(
+	function(){
+		$(this).addClass("hover");
+	}
+	);
+
+	$('#btn').on('click', function(){
+		$('.box').removeClass("hover");
+	})
 });
+
