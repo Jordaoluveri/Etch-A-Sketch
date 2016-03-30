@@ -43,6 +43,18 @@ $(document).ready(function() {
 				if (type === "trail"){
 					$(this).animate({"background-color":"white"}, 'fast')
 				}
+
+				if (type === "grey"){
+					orig = rgb2hex($(this).css("background-color")) 
+					console.log(parseInt(orig.substring(1), 16))
+					greyer = parseInt(orig.substring(1), 16)-1381653
+					if (greyer < 200000){
+						greyer = 0
+					}
+					
+					greyer = "#" + greyer.toString(16)
+					$(this).css({"background-color": greyer})
+				}
 			}, function(){
 				if (type === "trail"){
 					$(this).animate({"background-color":"black"}, 'medium')
@@ -78,3 +90,15 @@ $(document).ready(function() {
 	createGrid(16,16, "normal")
 })
 
+var hexDigits = new Array
+        ("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"); 
+
+//Function to convert hex format to a rgb color
+function rgb2hex(rgb) {
+ rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+ return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}
+
+function hex(x) {
+  return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+ }
