@@ -60,22 +60,37 @@ $(document).ready(function() {
 					$(this).animate({"background-color":"black"}, 'medium')
 				}
 			}
-		);
+		)
+		brush = "black"
+		$('.color').on('click', function(){
+			brush = $(this).css("background-color")
+			$('#ink').css({"background-color": brush})
+		})
+		$('.box').on('click', function(){
+			$(this).css({"background-color": brush})
+		})
 		
 	}	
 	
 	$('.btn').on('click', function(){
-		var newGrid = 0
-		while (!(newGrid > 0 && newGrid < 65)){
-			newGrid = prompt("How many squares do you want this grid to have? \n\n It must be between 1 ~ 64", "16")
-			if (newGrid === null){
-				break
+		type = $(this).attr('id')
+		if (type === "pArt"){
+			$("#colorPicker").css({"visibility":"visible"})
+			createGrid(8, 8, "pArt")
+		}else{
+			$("#colorPicker").css({"visibility":"hidden"})
+			var newGrid = 0
+			while (!(newGrid > 0 && newGrid < 65)){
+				newGrid = prompt("How many squares do you want this grid to have? \n\n It must be between 1 ~ 64", "16")
+				if (newGrid === null){
+					break
+				}
 			}
-		}
-		if (newGrid > 0 && newGrid < 65){
-			$('.box').removeClass("hover")
-			type = $(this).attr('id')
-			createGrid(newGrid, newGrid, type)
+			if (newGrid > 0 && newGrid < 65){
+				$('.box').removeClass("hover")
+				type = $(this).attr('id')
+				createGrid(newGrid, newGrid, type)
+			}
 		}
 	})
 

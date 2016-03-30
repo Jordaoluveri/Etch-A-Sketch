@@ -1,7 +1,9 @@
 #container {
 	width: 960px;
+	max-width: 80%;
 	height: 960px;
-	margin: 0 auto;
+	float:left;
+	margin: 0 0 0 19.5%;
 	border: 1px solid black;
 }
 
@@ -28,3 +30,44 @@
 	padding-bottom: 10px;
 }
 
+.color{
+	width: 60px;
+	height: 60px;
+	border: 1px solid #eee;
+
+}
+
+#colorPicker{
+	text-align: center;
+	visibility: hidden;
+	height: 600px;
+	width: 150px;
+	float: right;
+	margin: 25px 10px;
+}
+
+#wrapper{
+	display: all;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+#left{
+	float: left;
+}
+#right{
+	float:right;
+}
+#eraser{
+	width: 100%;
+	background-color: #fff;
+	border: 2px solid #666;
+	clear: both;
+}
+#ink{
+	width: 100%;
+	height: 60px;
+	clear: all;
+	background-color: black;
+	margin-bottom: 20px;
+}
