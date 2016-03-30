@@ -1,5 +1,22 @@
 #container {
-	width: 600px;
-	height: 400px;
-	background-color: black;
+	width: 632px;
+	height: 632px;
+	margin: 0 auto;
+
+}
+
+
+.column {
+	width: 100%
+	height: 37.5px;
+    
+    display: inline-block;
+}
+
+.box {
+	width: 37.5px;
+	height: 37.5px;
+	background-color: #fff;
+	border: 1px solid black;
+
 }
