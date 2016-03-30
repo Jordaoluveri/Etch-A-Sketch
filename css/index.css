@@ -1,6 +1,5 @@
 #container {
 	width: 960px;
-	max-width: 80%;
 	height: 960px;
 	float:left;
 	margin: 0 0 0 19.5%;
@@ -70,4 +69,5 @@
 	clear: all;
 	background-color: black;
 	margin-bottom: 20px;
+	border: 1px solid #666;
 }

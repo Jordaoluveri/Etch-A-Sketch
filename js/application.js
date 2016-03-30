@@ -9,7 +9,19 @@ $(document).ready(function() {
 		if (isNaN(columns)){
 			var columns = 16
 		}
-		var newHeight = ((960 - (rows*2))/rows) -2
+		console.log(type)
+
+		if (type === "pArt"){
+			var newHeight = ((700 - (rows*2))/rows) -2
+			$("#container").css({"height":"700"})
+			$("#container").css({"width":"700"})
+			$("#container").css({"margin":"0 0 0 27.5%"})
+		}else{
+			var newHeight = ((960 - (rows*2))/rows) -2
+			$("#container").css({"height":"960"})
+			$("#container").css({"width":"960"})
+			$("#container").css({"margin":"0 0 0 19.5%"})
+		}
 
 		for (var r=0; r < columns; r++){
 
